@@ -17,17 +17,21 @@ This project started as a personal project to meet my needs with my EUC. I wante
 
 As a longtime Garmin user, I decided to develop a Garmin app for my EUC. Once I had a version that was usable for everyday use, I decided to release the source code for the app as well as publish a release of WheelDash on the Garmin store. The first feedback I received gave me the desire to continue the adventure a little further, so I decided to continue development, supported by the encouragement of a handful of people. While I am the only developer, WheelDash has benefited from the exchanges I have had with the first users. It is a project developed by and for the EUC rider community that we are. This is also why I want WheelDash to be and remain 100% free and open source.
 
+in 2024, Garmin modified it's Bluetooth stack and since then, all Garimin user who have decided to upgrade their watch are observing increased latency in information updates.  Garmin not listening to its app developers, I have decided to create a new version of WheelDash for Amazfit.  In addition to making much cheaper watches, their bluetooth implementation rocks allowing real time updates of critical information such as the reported PWM. I still maintain the Garmin version but most new features now land Amazfit.
+
 ## Features
 
-WheelDash is an app for Garmin devices and offers real-time display of important data such as speed, battery level, temperature, PWM, and various other metrics. It also allows for the management of common wheel settings directly from the watch. In addition, it provides alarms for PWM, speed, and temperature, and allows you to map specific actions on your watch button (like toggling your EUC lights on or off).
+WheelDash is an app for Amazfit and Garmin devices and offers real-time display of important data such as speed, battery level, temperature, PWM, and various other metrics. It also allows for the management of common wheel settings directly from the watch. In addition, it provides alarms for PWM, speed, and temperature, and allows you to map specific actions on your watch button (like toggling your EUC lights on or off).
 
-It seamlessly integrates with the Garmin environment, making it easy to record your rides and store data transmitted by your wheel. All route information and ride data are readily accessible through the Garmin Connect app or portal.
+On Garmin, It seamlessly integrates with the Garmin environment, making it easy to record your rides and store data transmitted by your wheel. All route information and ride data are readily accessible through the Garmin Connect app or portal.
 
-WheelDash is a standalone app and not a companion for WheelLog, DarknessBot, or EUC World, so WheelDash does not require any of these apps to function.
+On Amazit, there is no such enviroment so I decided to develop a web server which can be used to securely upload your rides and consult the detailed stats online.
+
+WheelDash is a standalone app and not a companion for WheelLog, DarknessBot, or EUC World, so WheelDash does not require any of these apps to function.  As on option, you can use WheelDash to display information sent by EUC World.
 
 ## Versions
 
-WheelDash exists in two forms: a Garmin application and a datafield that can be added to an existing activity. While the application and datafield versions share a fair amount of code, the datafield version is more restricted due to Garmin's restrictions on memory usage and UI refresh rate. The datafield version is however THE solution to be able to use Garmin native navigation and display or record wheel related data.
+On Garmin WheelDash exists in two forms: a Garmin application and a datafield that can be added to an existing activity. While the application and datafield versions share a fair amount of code, the datafield version is more restricted due to Garmin's restrictions on memory usage and UI refresh rate. The datafield version is however THE solution to be able to use Garmin native navigation and display or record wheel related data.
 
 <center>
 <img src="/assets/images/WD_AppTypeTab.png"/>
@@ -41,6 +45,7 @@ WheelDash currently supports all EUCs model from the following brands :
 - Leaperkim
 - KingSong
 - Inmotion (recent models starting from V11)
+- Nosfet
 
 <center>
 <img src="/assets/images/WD_EUC_CompatTab.png"/>
@@ -60,9 +65,16 @@ You can check watch models specification here:
 
 [https://developer.garmin.com/connect-iq/compatible-devices/](https://developer.garmin.com/connect-iq/compatible-devices/)
 
+## Compatible Amazfit devices
+
+- Active 2 (Round or Square, with or wthout NFC)
+- Balance 2 (Round or Square)
+- Bip 6
+- T-Rex 3
+
 ## Activity Recording
 
-WheelDash allows you to track your riding session by saving it as a Garmin activity. Besides saving your ride route, it also records the following metrics of you EUC :
+WheelDash allows you to track your riding session by saving it as a Garmin activity or as sessions on Aamazfit. Besides saving your ride route, it also records the following metrics of you EUC :
 
 Speed, PWM, Voltage, Current,Motor power and motherboard temperature.
 
